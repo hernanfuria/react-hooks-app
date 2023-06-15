@@ -11,6 +11,19 @@ export const todoReducer = (initialState, action) => {
             // };
             // return newTodos;
             return initialState.filter(todo => todo.id !== action.payload);
+
+        case 'toggle_todo':
+            return initialState.map(todo => {
+                if (action.payload === todo.id) {
+                    // console.log(`toggle ${todo.id} to ${!todo.done}`)
+                    return {
+                        ...todo,
+                        done: !todo.done
+                    };
+                }
+                return todo;
+            });
+
         default:
             return initialState;
     }
