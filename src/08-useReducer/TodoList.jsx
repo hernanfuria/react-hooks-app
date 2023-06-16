@@ -8,7 +8,8 @@ export const TodoList = ({todos, onRemoveTodo, onToggleTodo}) => {
                     <TodoItem 
                         key={todo.id} 
                         id={todo.id} 
-                        description={todo.description} 
+                        description={todo.description}
+                        done={todo.done} 
                         onRemoveTodo={onRemoveTodo} 
                         onToggleTodo={onToggleTodo}
                     />
