@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom"
 import { HomePage, LoginPage, AboutPage, Navbar } from "./"
+import { UserProvider } from "./context/UserProvider"
 
 /*
 const routes = [
@@ -26,7 +27,7 @@ const routes = [
 
 export const MainApp = () => {
   return (
-    <>
+    <UserProvider>
         <h1>MainApp</h1>
         <Navbar />
         <hr />
@@ -37,6 +38,6 @@ export const MainApp = () => {
             <Route path="/about" element={ <AboutPage /> } />
             <Route path="/*" element={ <Navigate to='/' /> } />
         </Routes>
-    </>
+    </UserProvider>
   )
 }
