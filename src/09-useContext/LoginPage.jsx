@@ -4,7 +4,6 @@ import { UserContext } from './context/UserContext';
 export const LoginPage = () => {
 
     const {user, setUser} = useContext(UserContext);
-    console.log(user);
 
     return (
         <>
